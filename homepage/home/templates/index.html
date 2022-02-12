@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaniSpa</title>
+    <link rel="icon" href="{% static 'ana_spa.png' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'ana_spa.png' %}" alt="">
+        <h3>Salud, Belleza y Glamour</h3>
+    </div>
+    <div class="redes">
+        <a href="https://wa.me/+584242412231" target="_blank" title="whatsapp"><img src="{% static 'whatsapp.png' %}" alt="" width="40px"></a>
+        <a href="https://www.instagram.com/nanispa244/" target="_blank" id="ins" title="whatsapp"><img src="{% static 'instagram.png' %}" alt="" width="40px"></a>
+    </div>
+    <div class="slider_div">
+        <div class="container-all">
+            <input type="radio" id="1" name="image-slide" hidden>
+            <input type="radio" id="2" name="image-slide" hidden>
+            <input type="radio" id="3" name="image-slide" hidden>
+    
+            <div class="slide">
+                <div class="item-slide">
+                    <img src="{% static 'img1.png' %}" alt="">
+                </div>
+                <div class="item-slide">
+                    <img src="{% static 'img2.png' %}" alt="">
+                </div>
+                <div class="item-slide">
+                    <img src="{% static 'img3.png' %}" alt="">
+                </div>
+            </div>
+    
+            <div class="pagination">
+                <label for="1" class="pagination-item">
+                    <img src="{% static 'img1.png' %}" alt="">
+                </label>
+                <label for="2" class="pagination-item">
+                    <img src="{% static 'img2.png' %}" alt="">
+                </label>
+                <label for="3" class="pagination-item">
+                    <img src="{% static 'img3.png' %}" alt="">
+                </label>
+            </div>
+    
+        </div>
+    </div>
+    <div class="footer">
+        <h4>Caracas - Av.Baralt - Edif Mistol - Piso 16</h4>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.8820995990454!2d-66.91992178520154!3d10.509951492502699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5ec519952935%3A0x6f9cf050df5503f2!2sEdificio%20Mistol%2C%20Av.%20Oeste%203%2C%20Caracas%201010%2C%20Distrito%20Capital!5e0!3m2!1ses-419!2sve!4v1644681499517!5m2!1ses-419!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</body>
+</html>

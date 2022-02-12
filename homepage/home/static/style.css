@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(243, 195, 241);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    margin: 0;
+    align-items: center;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header h3{
+    color: blueviolet;
+    margin: 20px;
+    cursor: default;
+}
+
+.header img{
+    width: 130px;
+    margin-top: 3%;
+    border-radius: 60%;
+    -webkit-box-shadow: 1px 1px 28px 11px rgba(120,46,161,0.61); 
+box-shadow: 1px 1px 28px 11px rgba(120,46,161,0.61);
+
+animation: animate 6s linear infinite;
+}
+
+
+@keyframes animate {
+    0%{
+        box-shadow: 1px 1px 28px 11px rgba(106, 2, 161, 0.61);
+    }
+    50%{
+        box-shadow: 1px 1px 28px 11px rgba(234, 0, 255, 0.61);
+    }
+    0%{
+        box-shadow: 1px 1px 28px 11px rgba(120,46,161,0.61);
+    }
+}
+
+
+.slider_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.redes a{
+    position: relative;
+    margin: 10px;
+    animation: animate2 2s linear infinite;
+    
+}
+
+.redes a img{
+    border-radius: 60%;/*
+    -webkit-box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.62); 
+    box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.62);*/
+}
+
+#ins{
+    animation-delay: 1s;
+}
+
+@keyframes animate2{
+    0%{
+        margin-top: 15px;
+    }
+    50%{
+        margin-top: 35px;
+    }
+    100%{
+        margin-top: 15px;
+    }
+    
+}
+
+.container-all{
+    position: relative;
+    max-width: 398px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0,0,0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.item-slide{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{    
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255,255,255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: white;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100%*1),0,0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: white;
+}
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100%*2),0,0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: white;
+}
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100%*0), 0,0);
+    }
+    66%{
+        transform: translate3d(calc(-100%*1), 0,0);
+    }
+    100%{
+        transform: translate3d(calc(-100%*2), 0,0);
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h4{
+    font-size: 1rem;
+    color: blueviolet;
+}
+
+.direccion iframe{
+    margin: 0;
+}
+
+.mapa{
+    width: 350px;
+    width: 100%;
+    height: 200px;
+}
+
+
